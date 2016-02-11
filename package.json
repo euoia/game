@@ -1,0 +1,15 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Pickard <james.pickard@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.1.0",
+    "weighted-random": "^0.1.0"
+  }
+}
