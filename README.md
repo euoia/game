@@ -1,3 +1,6 @@
+### Design
+
+```
 1. Battle starts
 2. Get draw
 
@@ -17,3 +20,4 @@ Either: draw, use, or defend (permanent skill, recharge MP)
 
 also:
 	traps (ice/fire)
+```
