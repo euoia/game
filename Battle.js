@@ -56,19 +56,7 @@ module.exports = class Battle {
 
 
   applySkill (skill, avatar, target) {
-    switch (skill.type) {
-      case constants.ATTACKING:
-          target.hp += skill.hp;
-          break;
-      case constants.HEALING:
-          target.hp += skill.hp;
-          break;
-      case constants.COUNTER:
-          target.hp += skill.hp;
-          break;
-    }
-
-
+    skill.effect(avatar, target);
     avatar.mp -= skill.mp;
   }
 }
