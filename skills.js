@@ -1,60 +1,54 @@
-export const ATTACKING='attacking';
-export const HEALING='healing';
-export const COUNTER='counter';
-export const BUF='buf';
-export const DEBUF='debuf';
+'use strict';
+const constants = require('./constants');
 
-export const ALLIES='allies';
-export const ENEMIES='enemies';
-
-export default [
+module.exports = [
   {
     name: 'slice',
-    type: ATTACKING,
+    type: constants.ATTACKING,
     mp: 5,
     hp: -5,
-    targets: ENEMIES
+    targets: constants.ENEMIES
   },
   {
     name: 'swipe',
-    type: ATTACKING,
+    type: constants.ATTACKING,
     mp: 3,
     hp: -3,
-    targets: ENEMIES
+    targets: constants.ENEMIES
   },
   {
     name: 'small heal',
-    type: HEALING,
+    type: constants.HEALING,
     mp: 2,
     hp: 2,
-    targets: ALLIES
+    targets: constants.ALLIES
   },
   {
     name: 'big heal',
-    type: HEALING,
+    type: constants.HEALING,
     mp: 5,
     hp: 8,
-    targets: ALLIES
+    targets: constants.ALLIES
   },
   {
     name: 'counter attack',
-    type: COUNTER,
+    type: constants.COUNTER,
     mp: 4,
     hp: -4,
-    targets: ENEMIES
+    targets: constants.ENEMIES
   },
   {
     name: 'armour',
-    type: BUF,
+    type: constants.BUF,
     mp: 2,
     def: 1,
-    targets: ALLIES
+    targets: constants.ALLIES
   },
   {
     name: 'drain',
-    type: DEBUF,
+    type: constants.DEBUF,
     mp: 4,
     att: 1,
-    targets: ENEMIES
+    targets: constants.ENEMIES
   }
 ];

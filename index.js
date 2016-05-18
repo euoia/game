@@ -1,8 +1,9 @@
-import skills from './skills.js';
-import Avatar from './Avatar.js';
-import AI from './AI.js';
-import _ from 'lodash';
-import Battle from './Battle.js';
+'use strict';
+const AI = require('./AI');
+const Avatar = require('./Avatar');
+const Battle = require('./Battle');
+const _ = require('lodash');
+const skills = require('./skills');
 
 const ai1Avatar = new Avatar(_(skills).sampleSize(3).map('name').value(), _.random(5), 'Bobba');
 const ai1 = new AI([ai1Avatar], 'Bob');

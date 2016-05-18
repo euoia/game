@@ -9,6 +9,7 @@
   "author": "James Pickard <james.pickard@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "babel-cli": "^6.9.0",
     "lodash": "^4.1.0",
     "weighted-random": "^0.1.0"
   }

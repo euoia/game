@@ -1,6 +1,7 @@
-import _ from 'lodash';
+'use strict';
+const _ = require('lodash');
 
-export default class AI {
+module.exports = class AI {
   constructor (avatars, name) {
     this.name = name;
     this.avatars = avatars;

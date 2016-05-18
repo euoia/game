@@ -1,7 +1,8 @@
-import weightedRandom from 'weighted-random';
-import _ from 'lodash';
+'use strict';
+const weightedRandom = require('weighted-random');
+const _ = require('lodash');
 
-export default class Avatar {
+module.exports = class Avatar {
   constructor (skills, speed, name) {
     this.skills = skills;
     this.speed = speed;

@@ -1,9 +1,9 @@
-import _ from 'lodash';
-import skills from './skills.js';
-import { ALLIES, ENEMIES } from './skills.js';
-import { ATTACKING, HEALING, COUNTER, BUF, DEBUF } from './skills.js';
+'use strict';
+const _ = require('lodash');
+const skills = require('./skills');
+const constants = require('./constants');
 
-export default class Battle {
+module.exports = class Battle {
   constructor (player1, player2) {
     this.player1 = player1;
     this.player2 = player2;
@@ -35,14 +35,14 @@ export default class Battle {
 
     let possibleTargets;
     switch (skill.targets) {
-      case ENEMIES:
+      case constants.ENEMIES:
         possibleTargets = _.filter(this.avatars, a => a.player !== nextAvatar.player);
         break;
-      case ALLIES:
+      case constants.ALLIES:
         possibleTargets = _.filter(this.avatars, a => a.player === nextAvatar.player);
         break;
       default:
-          throw new Error(`Unhandld target type ${skill.targets}`);
+          throw new Error(`Unhandled target type ${skill.targets}}`);
     }
 
     const target = nextAvatar.player.pickTarget(nextAvatar, possibleTargets);
@@ -57,13 +57,13 @@ export default class Battle {
 
   applySkill (skill, avatar, target) {
     switch (skill.type) {
-      case ATTACKING:
+      case constants.ATTACKING:
           target.hp += skill.hp;
           break;
-      case HEALING:
+      case constants.HEALING:
           target.hp += skill.hp;
           break;
-      case COUNTER:
+      case constants.COUNTER:
           target.hp += skill.hp;
           break;
     }
