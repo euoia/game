@@ -4,31 +4,31 @@ const constants = require('./constants');
 // Effect functions for each skill
 
 //TODO: Real calculations for effects
-var useSlice = function (user, target) {
+const useSlice = function (user, target) {
     target.hp += -5 + (user.strength / 2);
 }
 
-var useSwipe = function (user, target) {
+const useSwipe = function (user, target) {
     target.hp += -3 + (user.strength / 2);
 }
 
-var useSmallHeal = function (user, target) {
+const useSmallHeal = function (user, target) {
     target.hp += 3 + (user.strength / 2);
 }
 
-var useBigHeal = function (user, target) {
+const useBigHeal = function (user, target) {
     target.hp += 8 + (user.strength / 2);
 }
 
-var useCounterAttack = function (user, target) {
+const useCounterAttack = function (user, target) {
     target.hp -= 4 + (user.strength / 2);
 }
 
-var useArmour = function (user, target) {
+const useArmour = function (user, target) {
     target.endurance += 1 + (user.strength / 2);
 }
 
-var useDrain = function (user, target) {
+const useDrain = function (user, target) {
     target.strength -= 1 + (user.strength / 2);
 }
 
